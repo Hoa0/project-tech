@@ -8,4 +8,4 @@ Gebruikers kunnen met deze matching app contacten vinden die graag met elkaar su
 ## Installaties
 
 ## License
-
+In dit repository heb ik gebruik gemaakt van een [MIT License](https://github.com/Hoa0/project-tech/blob/main/LICENSE)
