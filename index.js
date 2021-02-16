@@ -46,6 +46,7 @@ app.get('/filter', (req, res) => {
 
 // ejs
 // https://www.youtube.com/watch?v=VM-2xSaDxJc
+// https://github.com/noobcoder1137/ejs_templates_express 
 app.use('/public',express.static(path.join(__dirname,'static')));
 app.set('view engine','ejs');
 app.get('/:userQuery',(req,res)=>{
