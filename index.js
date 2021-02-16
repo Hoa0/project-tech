@@ -1,6 +1,7 @@
 const express = require('express');
-
 const path = require('path');
+const ejs = require('ejs');
+
 //init app
 const app = express();
 const port = 3000;
@@ -41,6 +42,17 @@ app.get('/', function(req, res){
 
 app.get('/filter', (req, res) => {
   res.render('filter');
+});
+
+// ejs
+// https://www.youtube.com/watch?v=VM-2xSaDxJc
+app.use('/public',express.static(path.join(__dirname,'static')));
+app.set('view engine','ejs');
+app.get('/:userQuery',(req,res)=>{
+    res.render('home',{data : {userQuery: req.params.userQuery,
+                               searchResults : ['book1','book2','book3'],
+                               loggedIn : true,
+                               username : 'yooo'}});
 });
 
 // start server
