@@ -5,13 +5,14 @@ const ejs = require('ejs');
 const app = express();
 const port = 3000;
 
-app.use('/public',express.static(path.join(__dirname,'static')));
+app.use(express.static('static'));
 app.set('view engine','ejs');
 
 //route
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('index.ejs')
 });
+
 app.get('/search', (req, res) => {
   res.render('search')
 });
