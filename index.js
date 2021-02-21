@@ -17,8 +17,8 @@ app.get('/search', (req, res) => {
   res.render('search')
 });
 
-app.get('/sushi/:userQuery',(req,res)=>{
-    res.render('home',{data : {userQuery: req.params.userQuery,
+app.get('/test/:userQuery',(req,res)=>{
+    res.render('test',{data : {userQuery: req.params.userQuery,
                                searchResults : ['Sashimi','Temaki','California roll'],
                                loggedIn : true,
                                username : 'Jan'}});
