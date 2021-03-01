@@ -1,3 +1,3 @@
 var test = "I am a test";
-console.log(`Test: ${test}`)
-const test = 'Another one';
+console.log(`Test: ${test}`);
+const test = "Another one";
