@@ -9,31 +9,35 @@ app.use(express.static("static"));
 app.set("view engine", "ejs");
 
 //route
-app.get("/", function (req, res) {
-  res.render("index.ejs");
+app.get("/", function(req, res) {
+    res.render("index.ejs");
 });
 
 app.get("/search", (req, res) => {
-  res.render("search");
+    res.render("search");
+});
+
+app.get("/filter", (req, res) => {
+    res.render("filter");
 });
 
 app.get("/test/:userQuery", (req, res) => {
-  res.render("test", {
-    data: {
-      userQuery: req.params.userQuery,
-      searchResults: ["Sashimi", "Temaki", "California roll"],
-      loggedIn: true,
-      username: "Jan",
-    },
-  });
+    res.render("test", {
+        data: {
+            userQuery: req.params.userQuery,
+            searchResults: ["Sashimi", "Temaki", "California roll"],
+            loggedIn: true,
+            username: "Jan",
+        },
+    });
 });
 
 // page not found
-app.use(function (req, res, next) {
-  res.status(404).send("Sorry can't find that!");
+app.use(function(req, res, next) {
+    res.status(404).send("Sorry can't find that!");
 });
 
 // start server
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
+    console.log(`Example app listening on port ${port}!`);
 });
