@@ -10,19 +10,46 @@
 
         <main class="filter-page">
             <!-- filter page -->
-            <!-- section one -->
-            <section>
-                <h2>Filter</h2>
-                <article>
-                    <h3>Leeftijd</h3>
-                    <ul>
-                        <li><input type="radio" id="leeftijd" name="drone" value="18-25jaar">
-                            <label for="leeftijd">18 - 25 jaar</label></li>
-                    </ul>
-                </article>
-            </section>
 
+                <h2><%= title %></h2>
+                
+                <form action="/searchChef/:chefId" method="post">
 
+                    <div>
+                        <fieldset>
+                            <!-- lijst met leeftijd, skills en gerechten toevoegen-->
+                            <legend>Leeftijd:</legend>
+                            <% ages.forEach(function(ageChef){ %>
+                            <input type="checkbox" name="ages" value="<%= ageChef %>" id="<%= ageChef %>">
+                            <label for="<%= ageChef %>"><%= ageChef %></label><br>
+                            <% }) %>
+                        </fieldset>
+
+                        <fieldset>
+                            <!-- lijst met leeftijd, skills en gerechten toevoegen-->
+                            <legend>Skills:</legend>
+                            <% skills.forEach(function(skillsChef){ %>
+                            <input type="checkbox" name="skills" value="<%= skillsChef %>" id="<%= skillsChef %>">
+                            <label for="<%= skillsChef %>"><%= skillsChef %></label><br>
+                            <% }) %>
+                        </fieldset>
+
+                        <fieldset>
+                            <!-- lijst met leeftijd, skills en gerechten toevoegen-->
+                            <legend>Sushi gerechten:</legend>
+                            <% gerechten.forEach(function(gerechtenChef){ %>
+                            <input type="checkbox" name="gerechten" value="<%= gerechtenChef %>" id="<%= gerechtenChef %>">
+                            <label for="<%= gerechtenChef %>"><%= gerechtenChef %></label><br>
+                            <% }) %>
+
+                            <label for="anders">Anders</label><br>
+                            <input id="anders" type="text" name="anders">
+                        </fieldset>
+
+                    </div>
+
+                    <button>Zoek sushi chef-koks</button>
+                </form>
         </main>
 
         <!-- footer-->

@@ -137,8 +137,6 @@ main.search-page>section:first-of-type input {
 /*-----FILTER OPTION----*/
 
 main.search-page>section:first-of-type>article:first-of-type>a {
-    background: none;
-    border: none;
     cursor: pointer;
 }
 
@@ -146,7 +144,6 @@ main.search-page>section:first-of-type>article:first-of-type>a>svg {
     width: 2em;
     height: 2em;
 }
-
 
 /* AANBEVOLEN */
 
@@ -169,11 +166,31 @@ main.p-filter>section:first-of-type>article:nth-of-type(2)>button {
 }
 
 
-/*  FILTER PAGE */
+/************** FILTER PAGE ************/
+
+main.filter-page>section:first-of-type {
+    margin-bottom: 7em;
+}
+
+main.filter-page>section:first-of-type article {
+    text-align: start;
+    padding-left: 3em;
+}
 
 main.filter-page>section:first-of-type>article>ul>li {
     margin: 0;
     padding: 0;
+}
+
+main.filter-page>section>article>ul>li input {
+    width: 2em;
+    height: 2em;
+}
+
+main.filter-page input.input-food {
+    width: 15em;
+    height: 2em;
+    text-align: center;
 }
 
 
