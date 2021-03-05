@@ -45,28 +45,15 @@ app.get("/", function(req, res) {
     res.render("index.ejs");
 });
 
-app.get('/searchChef', (req, res) => {
-      res.render('search', {title:'Zoek een sushi chef-kok maatje', chefList})
-  });
-
-  app.get('/searchChef/filterChef', (req, res) => {
-    res.render('filter', {title: "Filter", ages, skills, gerechten});
-  });
-  // nadat je op "zoek sushi chef-koks" geklikt heb, volgende page
+  app.get('/searchChef', async (req, res) => {
+    // create an empty list of chefs
+  let sushiChef = {}
+  // look for alle chefs in database and sort them by age and name into an array
+  sushiChef = await db.collection('chefs').find({},{sort: {ages: -1, name: 1}}).toArray();
+  res.render('search', {title:'Zoek een sushi chef-kok maatje', sushiChef})
+});
   
-app.post('/searchChef/filterChef', (req,res) => {
-    const id = slug(req.body.name);
-    const sushiChefs = {"id": "id","gerechten": req.body.gerechten ,"name": req.body.name, "ages": req.body.ages, "chefs": req.body.chefs};
-    chefList.push(sushiChefs);
-    res.render('result', {title: "search Resultaten", sushiChefs})
-  });
-  
-  // zoekt in de arry naar de id zoals find,push
-  app.get('/searchChef/:chefId', (req, res) => {
-      const chefShow = chefList.find( chefShow => chefShow.id == req.params.chefId);
-      res.render('result', {title: "Result", chefShow})
-  });
-
+  // test file
 app.get("/test/:userQuery", (req, res) => {
     res.render("test", {
         data: {

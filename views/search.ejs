@@ -26,7 +26,7 @@
                 </a>
             </section>
 
-            <% chefs.forEach(function(sushiChefs){ %>
+            <% sushiChef.forEach(function(chefKok){ %>
                 <section>
                     <h3 class="hide-elements">Informatie over de persoon</h3>
                     <article>
@@ -37,12 +37,12 @@
                     </article>
 
                     <article>
-                        <h4><%= sushiChefs.gerechten %></h4>
+                        <h4><%= chefKok.gerechten %></h4>
                         <h4>
-                            <%= sushiChefs.name %>, <%= sushiChefs.ages %>, <%= sushiChefs.gender %>
+                            <%= chefKok.name %>, <%= chefKok.ages %>, <%= chefKok.gender %>
                         </h4>
                         <h4>
-                            <%= sushiChefs.skills %>
+                            <%= chefKok.skills %>
                         </h4>
                     </article>
 
