@@ -5,18 +5,11 @@ const bodyParser = require('body-parser');
 const slug = require('slug');
 //init app
 const app = express();
+const dotenv=require('dotenv').config();
 const port = 3000;
 
-const chefs=[
-{"id":"beef-maki","gerechten":"Beef maki","name":"Bob","ages":25,"skills":"amateur","gender":"(M)"},
-{"id":"temaki-sushi","gerechten":"Temaki","name":"Jan","ages":24,"skills":"gevorderd","gender":"(M)"},
-{"id":"ebi-maki","gerechten":"EBI Fry Maki","name":"Piet","ages":35,"skills":"gevorderd","gender":"(M)"},
-{"id":"zalm-maki","gerechten":"Zalm","name":"Appie","ages":20,"skills":"gevorderd","gender":"(M)"}];
-
-const ages =["18 t/m 25 jaar", "25 t/m 35 jaar", "35 t/m 45 jaar", "45 jaar en ouder"];
-const gerechten =["Beef maki", "Temaki", "EBI Fry Maki", "California Maki", "Zalm"];
-const skills =["amateur", "gevorderd", "professioneel"];
-
+// test db
+console.log(process.env.TESTVAR);
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static("static"));
