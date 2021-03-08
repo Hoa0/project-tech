@@ -2,6 +2,9 @@
 
 Dit is de Repository voor project-tech in blok tech.
 
+## Concept
+Master sushi-chefs is een matching app, waarin mensen getalenteerde kokers kunnen ontmoeten.
+
 ## Table of Content
 
 - Installaties
