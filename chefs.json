@@ -1,6 +1,34 @@
 [
-    {"id":"beef-maki","gerechten":"Beef maki","name":"Bob","ages":25,"skills":"amateur","gender":"(M)"},
-    {"id":"temaki-sushi","gerechten":"Temaki","name":"Jan","ages":24,"skills":"gevorderd","gender":"(M)"},
-    {"id":"ebi-maki","gerechten":"EBI Fry Maki","name":"Piet","ages":35,"skills":"gevorderd","gender":"(M)"},
-    {"id":"zalm-maki","gerechten":"Zalm","name":"Appie","ages":20,"skills":"gevorderd","gender":"(M)"}
-    ]
+  {
+    "id": "beef-maki",
+    "gerechten": "Beef maki",
+    "name": "Bob",
+    "ages": 25,
+    "skills": "amateur",
+    "gender": "(M)"
+  },
+  {
+    "id": "temaki-sushi",
+    "gerechten": "Temaki",
+    "name": "Jan",
+    "ages": 24,
+    "skills": "gevorderd",
+    "gender": "(M)"
+  },
+  {
+    "id": "ebi-maki",
+    "gerechten": "EBI Fry Maki",
+    "name": "Piet",
+    "ages": 35,
+    "skills": "gevorderd",
+    "gender": "(M)"
+  },
+  {
+    "id": "zalm-maki",
+    "gerechten": "Zalm",
+    "name": "Appie",
+    "ages": 20,
+    "skills": "gevorderd",
+    "gender": "(M)"
+  }
+]

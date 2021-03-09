@@ -5,51 +5,67 @@
     <%- include('layout/head'); -%>
 </head>
 
-<body>
+<body class="filter-page">
     <%- include('layout/header'); -%>
 
         <main class="filter-page">
             <!-- filter page -->
+            <section>
+                <h2>
+                    <%= title %>
+                </h2>
+            </section>
 
-                <h2><%= title %></h2>
-                
-                <form action="/searchChef/:chefId" method="post">
-
-                    <div>
-                        <fieldset>
-                            <!-- lijst met leeftijd, skills en gerechten toevoegen-->
-                            <legend>Leeftijd:</legend>
-                            <% ages.forEach(function(ageChef){ %>
-                            <input type="checkbox" name="ages" value="<%= ageChef %>" id="<%= ageChef %>">
-                            <label for="<%= ageChef %>"><%= ageChef %></label><br>
+            <form action="/searchChef/filterChef" method="post">
+                <div>
+                    <fieldset>
+                        <!-- lijst met categorieen voorkeur opgeven-->
+                        <legend>Gender:</legend>
+                        <% gender.forEach(function(genderSearch){ %>
+                            <input type="checkbox" name="gender" value="<%= genderSearch %>" id="<%= genderSearch %>">
+                            <label for="<%= genderSearch %>">
+                                <%= genderSearch %>
+                            </label><br>
                             <% }) %>
-                        </fieldset>
+                    </fieldset>
 
-                        <fieldset>
-                            <!-- lijst met leeftijd, skills en gerechten toevoegen-->
-                            <legend>Skills:</legend>
-                            <% skills.forEach(function(skillsChef){ %>
-                            <input type="checkbox" name="skills" value="<%= skillsChef %>" id="<%= skillsChef %>">
-                            <label for="<%= skillsChef %>"><%= skillsChef %></label><br>
+                    <fieldset>
+                        <!-- lijst met categorieen voorkeur opgeven-->
+                        <legend>Leeftijd:</legend>
+                        <% ages.forEach(function(leeftijd){ %>
+                            <input type="checkbox" name="ages" value="<%= leeftijd %>" id="<%= leeftijd %>">
+                            <label for="<%= leeftijd %>">
+                                <%= leeftijd %>
+                            </label><br>
                             <% }) %>
-                        </fieldset>
+                    </fieldset>
 
-                        <fieldset>
-                            <!-- lijst met leeftijd, skills en gerechten toevoegen-->
-                            <legend>Sushi gerechten:</legend>
-                            <% gerechten.forEach(function(gerechtenChef){ %>
-                            <input type="checkbox" name="gerechten" value="<%= gerechtenChef %>" id="<%= gerechtenChef %>">
-                            <label for="<%= gerechtenChef %>"><%= gerechtenChef %></label><br>
+                    <fieldset>
+                        <!-- lijst met categorieen voorkeur opgeven-->
+                        <legend>Skills:</legend>
+                        <% skills.forEach(function(skillsSearch){ %>
+                            <input type="checkbox" name="skills" value="<%= skillsSearch %>" id="<%= skillsSearch %>">
+                            <label for="<%= skillsSearch %>">
+                                <%= skillsSearch %>
+                            </label><br>
                             <% }) %>
+                    </fieldset>
 
-                            <label for="anders">Anders</label><br>
-                            <input id="anders" type="text" name="anders">
-                        </fieldset>
+                    <fieldset>
+                        <!-- lijst met categorieen voorkeur opgeven-->
+                        <legend>Sushi gerechten:</legend>
+                        <% foodSushi.forEach(function(foodSearch){ %>
+                            <input type="checkbox" name="foodSushi" value="<%= foodSearch %>" id="<%= foodSearch %>">
+                            <label for="<%= foodSearch %>">
+                                <%= foodSearch %>
+                            </label><br>
+                            <% }) %>
+                    </fieldset>
+                </div>
 
-                    </div>
+                <button>Zoek een sushi chef-kok</button>
+            </form>
 
-                    <button>Zoek sushi chef-koks</button>
-                </form>
         </main>
 
         <!-- footer-->

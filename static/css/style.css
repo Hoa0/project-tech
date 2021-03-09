@@ -136,11 +136,12 @@ main.search-page>section:first-of-type input {
 
 /*-----FILTER OPTION----*/
 
-main.search-page>section:first-of-type>article:first-of-type>a {
+/* filter button*/
+main.search-page> section:first-of-type > a{
     cursor: pointer;
 }
 
-main.search-page>section:first-of-type>article:first-of-type>a>svg {
+main.search-page > section:first-of-type > a > svg {
     width: 2em;
     height: 2em;
 }
@@ -196,6 +197,20 @@ main.filter-page input.input-food {
 
 /**************************************/
 
+/* filter page ejs */
+main.filter-page>form{
+    margin-left: auto;
+    margin-right: auto;
+}
+main.filter-page>form>div>fieldset{
+    border: none;
+    text-align: start;
+    padding: 1em;
+}
+
+body.filter-page footer{
+    display: none;
+}
 
 /*-------------FOOTER----------------*/
 
