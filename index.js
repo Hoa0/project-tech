@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
-const slug = require("slug");
 //init app
 const app = express();
 const dotenv = require("dotenv").config();
@@ -66,8 +65,9 @@ app.get("/searchChef", async (req, res) => {
     .collection("chefs")
     .find({}, { sort: { ages: -1, name: 1 } })
     .toArray();
-  res.render("search.ejs", {
+  res.render("index.ejs", {
     title: "Zoek een sushi chef-kok maatje",
+    titleSearch: "Nieuwe leden",
     sushiChef,
   });
 });

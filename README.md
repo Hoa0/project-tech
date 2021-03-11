@@ -3,18 +3,22 @@
 Dit is de Repository voor project-tech in blok tech.
 
 ## Table of Content
+
 - Opdracht
 - Concept
 - Installaties
 - License
 
 ## Opdracht
-Voor project-Tech heb ik de opdracht gekregen om één feature van een matching app te realiseren. 
+
+Voor project-Tech heb ik de opdracht gekregen om één feature van een matching app te realiseren.
 
 ## Concept
+
 Master sushi-chefs is een matching app, waarin mensen elkaar kunnen ontmoeten met dezelfde intentie, om een sushi gerecht te koken. In de app bij het zoek scherm zal er standaard een aantal mensen staan die net nieuw zijn. De gebruiker kan gelijk zien hoe anderen profielen worden getoond. Er kan specifiek gematch worden op basis van de opgegeven voorkeuren die de gebruiker op geeft via een filter functie. De gebruiker kan filteren op leeftijd, opzoek naar een mannelijk of vrouwelijk koks, sushi gerecht en op vaardigheden op het gebiedt van kookkunsten.
 
 ## Installaties
+
 Om gebruik te maken van dit project, moet u Node.js en npm packages installeren. Volg hieronder de volgende stappen.
 
 **Om dit project lokaal op uw computer te krijgen, clone dit repo:**
