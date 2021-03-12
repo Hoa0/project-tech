@@ -1,6 +1,6 @@
 [
   {
-    "id": "beef-maki",
+    "id": "beefMaki",
     "gerechten": "Beef maki",
     "name": "Bob",
     "ages": 25,
@@ -8,7 +8,7 @@
     "gender": "(M)"
   },
   {
-    "id": "temaki-sushi",
+    "id": "temakiSushi",
     "gerechten": "Temaki",
     "name": "Jan",
     "ages": 24,
@@ -16,7 +16,7 @@
     "gender": "(M)"
   },
   {
-    "id": "ebi-maki",
+    "id": "ebiMaki",
     "gerechten": "EBI Fry Maki",
     "name": "Piet",
     "ages": 35,
@@ -24,11 +24,27 @@
     "gender": "(M)"
   },
   {
-    "id": "zalm-maki",
+    "id": "zalmMaki",
     "gerechten": "Zalm",
     "name": "Appie",
     "ages": 20,
     "skills": "gevorderd",
     "gender": "(M)"
+  },
+  {
+    "id": "zalmMakiTwo",
+    "gerechten": "Zalm",
+    "name": "Anna",
+    "ages": 28,
+    "skills": "gevorderd",
+    "gender": "(V)"
+  },
+  {
+    "id": "CaliforniaMaki",
+    "gerechten": "California Maki",
+    "name": "Sanne",
+    "ages": 23,
+    "skills": "Professioneel",
+    "gender": "(V)"
   }
 ]

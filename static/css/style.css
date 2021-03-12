@@ -126,6 +126,7 @@ main.searchPage > section:first-of-type > article > input {
   text-align: center;
 }
 
+/* filter button */
 main.searchPage > section:first-of-type > article > button {
   background: none;
   border: none;
@@ -270,7 +271,40 @@ main > section.sectionShowChef > article.bntSearchEjs button > svg {
   height: 4em;
 }
 
+/* filter button */
+main.searchPage > section:first-of-type > article > a {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+main.searchPage > section:first-of-type > article > a > svg {
+  margin-bottom: -0.5em;
+  width: 2em;
+  height: 2em;
+}
+
 /*--------END----- SEARCH PAGE - EJS ------------*/
+
+/* filter optie */
+form{
+  text-align: center;
+}
+form fieldset{
+  text-align: start;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  padding: 2em;
+}
+
+main.filterPage>section:first-of-type>h2{
+  margin-left: 20%;
+  padding: 1em;
+}
+
+
+
 
 /*************************************************/
 /*------------------- MEDIA QUERY---------------*/

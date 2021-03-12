@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 //init app
@@ -53,11 +52,7 @@ app.use(express.static("static"));
 app.set("view engine", "ejs");
 
 //route
-app.get("/", function (req, res) {
-  res.render("index.ejs");
-});
-
-app.get("/searchChef", async (req, res) => {
+app.get("/", async (req, res) => {
   // create an empty list of chefs
   let sushiChef = {};
   // look for alle chefs in database and sort them by age and name into an array
@@ -72,13 +67,21 @@ app.get("/searchChef", async (req, res) => {
   });
 });
 
-app.get("/searchChef/filterChef", function (req, res) {
+app.get("/filterChef", function (req, res) {
   res.render("filter.ejs", {
     title: "Geef je voorkeur op",
     gender,
     ages,
     skills,
     foodSushi,
+  });
+});
+
+app.get("/filterChef/result", async (req, res) => {
+  res.render("result.ejs", {
+    title: "Zoek een sushi chef-kok maatje",
+    titleSearch: "Resultaten",
+    sushiChef,
   });
 });
 
