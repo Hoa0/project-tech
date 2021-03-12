@@ -6,6 +6,7 @@ Dit is de Repository voor project-tech in blok tech.
 
 - Opdracht
 - Concept
+- Database structure
 - Installaties
 - License
 
@@ -16,6 +17,9 @@ Voor project-Tech heb ik de opdracht gekregen om één feature van een matching 
 ## Concept
 
 Master sushi-chefs is een matching app, waarin mensen elkaar kunnen ontmoeten met dezelfde intentie, om een sushi gerecht te koken. In de app bij het zoek scherm zal er standaard een aantal mensen staan die net nieuw zijn. De gebruiker kan gelijk zien hoe anderen profielen worden getoond. Er kan specifiek gematch worden op basis van de opgegeven voorkeuren die de gebruiker op geeft via een filter functie. De gebruiker kan filteren op leeftijd, opzoek naar een mannelijk of vrouwelijk koks, sushi gerecht en op vaardigheden op het gebiedt van kookkunsten.
+
+## Database structure
+<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/databaseStructurepng.png" width="250">
 
 ## Installaties
 
