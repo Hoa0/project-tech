@@ -67,6 +67,7 @@ app.get("/", async (req, res) => {
   });
 });
 
+/* post */
 app.get("/filterChef", function (req, res) {
   res.render("filter.ejs", {
     title: "Geef je voorkeur op",
