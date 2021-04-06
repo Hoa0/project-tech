@@ -65,14 +65,12 @@ app.post("/filterChef/result", async (req, res) => {
   sushiChef = await db
     .collection("chefs")
     .find(
-      {
-        gender: req.body.gender,
-        skills: req.body.skills,
-        foodDish: req.body.foodDish,
-        categAge: req.body.categAge
-        //  imageProfile: req.body.imageProfile,
-        // imageFood: req.body.imageFood
-      },
+      { gender: req.body.gender },
+      { skills: req.body.skills },
+      { foodDish: req.body.foodDish },
+      { categAge: req.body.categAge },
+      { imageProfile: req.body.imageProfile },
+      { imageFood: req.body.imageFood },
       { sort: { name: 1 } }
     ).toArray();
 
