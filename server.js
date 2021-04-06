@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const dotenv = require("dotenv").config();
 const { MongoClient, ObjectId } = require("mongodb");
-const port = 3000;
+const port = process.env.port || 3000;
 
 // test db
 console.log(process.env.TESTVAR);
