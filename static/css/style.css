@@ -253,6 +253,18 @@ img.chefImage {
   width: 6em;
 }
 
+legend{
+  background-color:white;
+  width:100%;
+  padding:0.8em;	
+  border-radius: 2rem;
+  line-height: 0em;
+}
+
+input{
+ 
+}
+
 /* icons cross and heart*/
 main>section.sectionShowChef>article.bntSearchEjs {
   background-color: #cce3de;
@@ -321,6 +333,7 @@ main.filterPage .bntFilterSearch{
   background-color: #ff6f59;
   font-weight: bold;
   color: white;
+  margin-bottom: 2em;
 }
 
 .favoTitel{

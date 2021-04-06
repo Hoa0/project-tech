@@ -68,7 +68,8 @@ app.post("/filterChef/result", async (req, res) => {
       {
         gender: req.body.gender,
         skills: req.body.skills,
-        foodDish: req.body.foodDish
+        foodDish: req.body.foodDish,
+        categAge: req.body.categAge
       //  imageProfile: req.body.imageProfile,
        // imageFood: req.body.imageFood
       },
