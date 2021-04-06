@@ -106,18 +106,27 @@ main {
 
 /*--------------- SEARCH PAGE -------------------*/
 /*-------------- SECTION ONE --------------------*/
-main.searchPage>section:first-of-type {
+/*main.searchPage>section:first-of-type*/
+section.logoMatchingApp{
   text-align      : center;
   background-color: #ff6f59;
   padding-bottom  : 1em;
   border-bottom   : 0.05rem solid grey;
 }
 
-main.searchPage>section:first-of-type>img {
+main.filterPage>section.logoMatchingApp{
+  margin-bottom: 2em;
+}
+
+/*main.searchPage>section:first-of-type>img*/
+img.logoImage {
   width     : 20%;
   margin-top: 1em;
 }
+.titelFilter{
+margin-right: 11%;
 
+}
 /* SEARCH INPUT STYLE */
 main.searchPage>section:first-of-type>article>input {
   width        : 20em;
@@ -304,12 +313,14 @@ main.filterPage>section:first-of-type>h2 {
   padding    : 1em;
 }
 
+/* zoek chef-kok button */
 main.filterPage .bntFilterSearch{
   width: 12em;
   height: 4em;
   border-radius: 2rem;
   background-color: #ff6f59;
   font-weight: bold;
+  color: white;
 }
 
 .favoTitel{

@@ -2,9 +2,9 @@
   "name": "project-tech",
   "version": "1.0.0",
   "description": "this is a project for block-tech",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

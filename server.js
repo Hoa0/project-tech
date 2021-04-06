@@ -42,7 +42,7 @@ app.get("/", async (req, res) => {
   // look for alle chefs in database and sort them by age and name into an array
   sushiChef = await db
     .collection("chefs")
-    .find({}, { sort: { ages: -1, name: 1 } })
+    .find({}, { sort: { name: 1 } })
     .limit(4)
     .toArray();
   res.render("index.ejs", {
@@ -55,7 +55,7 @@ app.get("/", async (req, res) => {
 /* filter page */
 app.get("/filterChef", async (req, res) => {
   res.render("filter.ejs", {
-    title: "Geef je voorkeur op"
+    title: "Voorkeur opgeven"
   });
 });
 
@@ -69,6 +69,8 @@ app.post("/filterChef/result", async (req, res) => {
         gender: req.body.gender,
         skills: req.body.skills,
         foodDish: req.body.foodDish
+      //  imageProfile: req.body.imageProfile,
+       // imageFood: req.body.imageFood
       },
       { sort: { name: 1 } }
     ).toArray();
