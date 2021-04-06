@@ -3,6 +3,7 @@
 
 ## Table of Content
 - Opdracht
+- Visuel
 - Database structure
 - Installaties
 - License
@@ -18,6 +19,10 @@ Requirement
 - voorkeur opgeven
 - kunnen filteren op interesses
 
+## Visuel
+<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/wikiImage/homeScherm.png" width="300">
+<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/wikiImage/filterScherm.png" width="300">
+<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/wikiImage/favoScherm.png" width="300">
 
 ## Database structure
 >Voor dit project heb ik gebruik gemaakt van mongoDB database. Hieronder een visuele weergaven van de datastructure. <br>
