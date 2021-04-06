@@ -70,8 +70,8 @@ app.post("/filterChef/result", async (req, res) => {
         skills: req.body.skills,
         foodDish: req.body.foodDish,
         categAge: req.body.categAge
-      //  imageProfile: req.body.imageProfile,
-       // imageFood: req.body.imageFood
+        //  imageProfile: req.body.imageProfile,
+        // imageFood: req.body.imageFood
       },
       { sort: { name: 1 } }
     ).toArray();
@@ -101,19 +101,19 @@ app.get("/favorite", async (req, res) => {
 });
 
 // delete 
-app.post('/favorite', async(req, res) => {
-	db.collection('faveChefs').deleteOne({});
+app.post('/favorite', async (req, res) => {
+  db.collection('faveChefs').deleteOne({});
 
-	let sushiChef = {};
+  let sushiChef = {};
 
-	sushiChef = await db.collection('faveChefs').find().toArray();
-	const chefPeople = sushiChef.filter(function(sushiChef) {
-		return sushiChef;
-	});
-    res.render("favorite.ejs", {
-      titleSearch: "Jouw favorieten",
-      sushiChef
-    });
+  sushiChef = await db.collection('faveChefs').find().toArray();
+  const chefPeople = sushiChef.filter(function (sushiChef) {
+    return sushiChef;
+  });
+  res.render("favorite.ejs", {
+    titleSearch: "Jouw favorieten",
+    sushiChef
+  });
 });
 
 // page not found
