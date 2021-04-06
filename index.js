@@ -105,7 +105,7 @@ app.post('/favorite', async(req, res) => {
 
 	sushiChef = await db.collection('faveChefs').find().toArray();
 	const chefPeople = sushiChef.filter(function(sushiChef) {
-		return sushiChef.subject;
+		return sushiChef;
 	});
     res.render("favorite.ejs", {
       titleSearch: "Jouw favorieten",
