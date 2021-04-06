@@ -7,12 +7,12 @@
 
 HTML,
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: 100% / 250%;
-  letter-spacing: 0.1em;
-  line-height: 0.1rem;
+  font-family     : Arial, Helvetica, sans-serif;
+  margin          : 0;
+  padding         : 0;
+  font-size       : 100% / 250%;
+  letter-spacing  : 0.1em;
+  line-height     : 0.1rem;
   background-color: #f2e9e4;
 }
 
@@ -20,37 +20,37 @@ body {
 /*--------------Header - nav --------------------*/
 
 header {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-top: 0.2em solid black;
+  overflow        : hidden;
+  position        : fixed;
+  bottom          : 0;
+  width           : 100%;
+  margin          : 0;
+  padding         : 0;
+  border-top      : 0.2em solid black;
   background-color: #f2e9e4;
-  z-index: 0;
+  z-index         : 0;
 }
 
-header > nav {
-  padding-top: 0.5em;
+header>nav {
+  padding-top   : 0.5em;
   padding-bottom: 0.5em;
-  text-align: center;
+  text-align    : center;
 }
 
-header > nav > ul > li {
+header>nav>ul>li {
   display: inline;
 }
 
 /* space between */
 
-header > nav > ul > li > a {
+header>nav>ul>li>a {
   padding: 2.5em;
 }
 
 /*----SVG ICONS MENU------*/
 
-header > nav > ul > li > a > svg {
-  width: 2.5em;
+header>nav>ul>li>a>svg {
+  width : 2.5em;
   height: 2.5em;
 }
 
@@ -61,18 +61,18 @@ header > nav > ul > li > a > svg {
 /* HIDE ELEMENTS*/
 .hide-elements,
 footer {
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
+  clip       : rect(0, 0, 0, 0);
+  clip-path  : inset(50%);
+  height     : 0.5em;
+  overflow   : hidden;
+  position   : absolute;
   white-space: nowrap;
-  width: 1px;
+  width      : 0.5em;
 }
 
 /* list */
 ul {
-  margin: 0;
+  margin : 0;
   padding: 0;
 }
 
@@ -83,7 +83,7 @@ li {
 /* link */
 a {
   text-decoration: none;
-  cursor: pointer;
+  cursor         : pointer;
 }
 
 img {
@@ -95,8 +95,8 @@ img {
 /*************************************************/
 /* -------------------- MAIN --------------------*/
 main {
-  display: grid;
-  grid-gap: 0em;
+  display           : grid;
+  grid-gap          : 0em;
   grid-template-rows: 1fr;
 
   margin-bottom: 3em;
@@ -106,49 +106,49 @@ main {
 
 /*--------------- SEARCH PAGE -------------------*/
 /*-------------- SECTION ONE --------------------*/
-main.searchPage > section:first-of-type {
-  text-align: center;
+main.searchPage>section:first-of-type {
+  text-align      : center;
   background-color: #ff6f59;
-  padding-bottom: 1em;
-  border-bottom: 0.05rem solid grey;
+  padding-bottom  : 1em;
+  border-bottom   : 0.05rem solid grey;
 }
 
-main.searchPage > section:first-of-type > img {
-  width: 20%;
+main.searchPage>section:first-of-type>img {
+  width     : 20%;
   margin-top: 1em;
 }
 
 /* SEARCH INPUT STYLE */
-main.searchPage > section:first-of-type > article > input {
-  width: 20em;
-  height: 3em;
+main.searchPage>section:first-of-type>article>input {
+  width        : 20em;
+  height       : 3em;
   border-radius: 0.8rem;
-  text-align: center;
+  text-align   : center;
 }
 
 /* filter button */
-main.searchPage > section:first-of-type > article > button {
+main.searchPage>section:first-of-type>article>button {
   background: none;
-  border: none;
-  cursor: pointer;
+  border    : none;
+  cursor    : pointer;
 }
 
-main.searchPage > section:first-of-type > article > button > svg {
+main.searchPage>section:first-of-type>article>button>svg {
   margin-bottom: -0.5em;
-  width: 2em;
-  height: 2em;
+  width        : 2em;
+  height       : 2em;
 }
 
 /*--------- SECTION TWO - SEARCH PAGE - nieuwe leden ---------*/
-main.searchPage > section:nth-of-type(2) {
+main.searchPage>section:nth-of-type(2) {
   text-align: center;
-  padding: 1em 0 1em 0;
+  padding   : 1em 0 1em 0;
 }
 
 /*--------- SECTION THREE - SEARCH PAGE - shows chefs ---------*/
-main.searchPage > section:nth-of-type(3) {
+main.searchPage>section:nth-of-type(3) {
   /* grid template */
-  display: grid;
+  display : grid;
   grid-gap: 0em;
   grid-template-areas:
     "photo profileText"
@@ -156,24 +156,24 @@ main.searchPage > section:nth-of-type(3) {
 }
 
 /* profile image - sushi */
-main.searchPage > section:nth-of-type(3) > article:first-of-type {
+main.searchPage>section:nth-of-type(3)>article:first-of-type {
   /* grid template */
   grid-area: photo;
 }
 
 img.sushiImage {
-  width: 13em;
+  width : 13em;
   height: 13em;
 }
 
 /* information about chefs, name, skills, food */
-main.searchPage > section:nth-of-type(3) > article:nth-of-type(2) {
-  line-height: 0.2rem;
-  text-align: center;
+main.searchPage>section:nth-of-type(3)>article:nth-of-type(2) {
+  line-height     : 0.2rem;
+  text-align      : center;
   background-color: #ffae9d;
   /* grid template */
-  grid-area: profileText;
-  width: 13em;
+  grid-area       : profileText;
+  width           : 13em;
 }
 
 img.chefImage {
@@ -181,38 +181,38 @@ img.chefImage {
 }
 
 /* icons cross and heart*/
-main.searchPage > section:nth-of-type(3) > article:nth-of-type(3) {
+main.searchPage>section:nth-of-type(3)>article:nth-of-type(3) {
   background-color: #cce3de;
-  margin-bottom: 2em;
+  margin-bottom   : 2em;
   /* center icons*/
-  display: flex;
+  display         : flex;
   /* grid template */
-  grid-area: bntIcons;
+  grid-area       : bntIcons;
 }
 
 /* icons button */
-main.searchPage > section:nth-of-type(3) > article:nth-of-type(3) button {
-  width: 100%;
+main.searchPage>section:nth-of-type(3)>article:nth-of-type(3) button {
+  width     : 100%;
   background: none;
-  cursor: pointer;
-  padding: 1em;
+  cursor    : pointer;
+  padding   : 1em;
   /* center icons*/
-  margin: 0 auto 0 auto;
+  margin    : 0 auto 0 auto;
   /* T R B L */
 }
 
 /* icons svg */
-main.searchPage > section:nth-of-type(3) > article:nth-of-type(3) button > svg {
-  width: 4em;
+main.searchPage>section:nth-of-type(3)>article:nth-of-type(3) button>svg {
+  width : 4em;
   height: 4em;
 }
 
 /*************************************************/
 /*---------------- SEARCH PAGE - EJS ------------*/
 
-main > section.sectionShowChef {
+main>section.sectionShowChef {
   /* grid template */
-  display: grid;
+  display : grid;
   grid-gap: 0em;
   grid-template-areas:
     "photo profileText"
@@ -220,24 +220,24 @@ main > section.sectionShowChef {
 }
 
 /* profile image - sushi */
-main > section.sectionShowChef>article.imgSushiEjs {
+main>section.sectionShowChef>article.imgSushiEjs {
   /* grid template */
   grid-area: photo;
 }
 
 img.sushiImage {
-  width: 13em;
+  width : 13em;
   height: 13em;
 }
 
 /* information about chefs, name, skills, food */
-main> section.sectionShowChef > article.textEjs {
-  line-height: 0.2rem;
-  text-align: center;
+main>section.sectionShowChef>article.textEjs {
+  line-height     : 0.2rem;
+  text-align      : center;
   background-color: #ffae9d;
   /* grid template */
-  grid-area: profileText;
-  width: 13em;
+  grid-area       : profileText;
+  width           : 13em;
 }
 
 img.chefImage {
@@ -245,120 +245,133 @@ img.chefImage {
 }
 
 /* icons cross and heart*/
-main> section.sectionShowChef > article.bntSearchEjs {
+main>section.sectionShowChef>article.bntSearchEjs {
   background-color: #cce3de;
-  margin-bottom: 2em;
+  margin-bottom   : 2em;
   /* center icons*/
-  display: flex;
+  display         : flex;
   /* grid template */
-  grid-area: bntIcons;
+  grid-area       : bntIcons;
 }
 
 /* icons button */
-main> section.sectionShowChef > article.bntSearchEjs button {
-  width: 100%;
+main>section.sectionShowChef>article.bntSearchEjs button {
+  width     : 100%;
   background: none;
-  cursor: pointer;
-  padding: 1em;
+  cursor    : pointer;
+  padding   : 1em;
   /* center icons*/
-  margin: 0 auto 0 auto;
+  margin    : 0 auto 0 auto;
   /* T R B L */
 }
 
 /* icons svg */
-main > section.sectionShowChef > article.bntSearchEjs button > svg {
-  width: 4em;
+main>section.sectionShowChef>article.bntSearchEjs button>svg {
+  width : 4em;
   height: 4em;
 }
 
 /* filter button */
-main.searchPage > section:first-of-type > article > a {
+main.searchPage>section:first-of-type>article>a {
   background: none;
-  border: none;
-  cursor: pointer;
+  border    : none;
+  cursor    : pointer;
 }
 
-main.searchPage > section:first-of-type > article > a > svg {
+main.searchPage>section:first-of-type>article>a>svg {
   margin-bottom: -0.5em;
-  width: 2em;
-  height: 2em;
+  width        : 2em;
+  height       : 2em;
 }
 
 /*--------END----- SEARCH PAGE - EJS ------------*/
 
 /* filter optie */
-form{
+form {
   text-align: center;
 }
-form fieldset{
-  text-align: start;
+
+form fieldset {
+  text-align  : start;
   margin-right: auto;
-  margin-left: auto;
-  border: none;
-  padding: 2em;
+  margin-left : auto;
+  border      : none;
+  padding     : 2em
 }
 
-main.filterPage>section:first-of-type>h2{
+main.filterPage>section:first-of-type>h2 {
   margin-left: 20%;
-  padding: 1em;
+  padding    : 1em;
 }
 
+main.filterPage .bntFilterSearch{
+  width: 12em;
+  height: 4em;
+  border-radius: 2rem;
+  background-color: #ff6f59;
+  font-weight: bold;
+}
 
-
+.favoTitel{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
 
 /*************************************************/
 /*------------------- MEDIA QUERY---------------*/
 @media (min-width: 30em) {
   img.sushiImage {
-    width: 100%;
+    width : 100%;
     height: 100%;
   }
+
   img.chefImage {
-    width: 10em;
+    width : 10em;
     height: 10em;
   }
 }
 
 @media (min-width: 40em) {
   img.sushiImage {
-    width: 100%;
+    width : 100%;
     height: 100%;
   }
 
   /* SEARCH PAGE - SECTION THREE - SHOWS CHEFS PROFILES */
-  main.searchPage > section:nth-of-type(3) {
-    margin-left: 20%;
+  main.searchPage>section:nth-of-type(3) {
+    margin-left : 20%;
     margin-right: 20%;
-    border-top: 1px solid black;
+    border-top  : 1px solid black;
     /* grid template */
-    display: grid;
-    grid-gap: 0em;
+    display     : grid;
+    grid-gap    : 0em;
     grid-template-areas:
       "photo profileText"
       "bntIcons bntIcons";
   }
 
-  main.searchPage > section:nth-of-type(3) > article {
-    border-left: 1px solid black;
+  main.searchPage>section:nth-of-type(3)>article {
+    border-left : 1px solid black;
     border-right: 1px solid black;
   }
 
   /* ---- ejs --- search --*/
   /* SEARCH PAGE - SECTION THREE - SHOWS CHEFS PROFILES */
-  main > section.sectionShowChef {
-    margin-left: 20%;
+  main>section.sectionShowChef {
+    margin-left : 20%;
     margin-right: 20%;
-    border-top: 1px solid black;
+    border-top  : 1px solid black;
     /* grid template */
-    display: grid;
-    grid-gap: 0em;
+    display     : grid;
+    grid-gap    : 0em;
     grid-template-areas:
       "photo profileText"
       "bntIcons bntIcons";
   }
 
-  main > section.sectionShowChef > article {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+  main>section.sectionShowChef>article {
+    border-left : 0.5em solid black;
+    border-right: 0.5em solid black;
   }
 }

@@ -4,7 +4,7 @@
         <article class="imgSushiEjs"> <img class="sushiImage" src="images/zalm-nigiri.jpg" alt="imgZalm">
         </article>
         <article class="textEjs">
-                <h3><%= chefKok.gerechten %></h3>
+                <h3><%= chefKok.foodDish %></h3>
                 <!-- https://www.missethoreca.nl/restaurant/nieuws/2017/04/jan-smink-kookt-niet-meer-mee-voor-bocuse-101267313?_ga=2.180072227.648573502.1615492492-1906803120.1615492492 -->
                 <img class="chefImage" src="images/janChef.png" alt="imgChefJan">
                 <p> <%= chefKok.name %>, <%= chefKok.ages %>, <%= chefKok.gender %></p>
@@ -12,12 +12,10 @@
         </article>
         <article class="bntSearchEjs">
             <!-- cross icon: https://iconmonstr.com/x-mark-3-svg/ -->
+            <form action="/favorite" method="post" >
             <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M20.197 2.837l.867.867-8.21 8.291 8.308 8.202-.866.867-8.292-8.21-8.23 8.311-.84-.84 8.213-8.32-8.312-8.231.84-.84 8.319 8.212 8.203-8.309zm-.009-2.837l-8.212 8.318-8.31-8.204-3.666 3.667 8.321 8.24-8.207 8.313 3.667 3.666 8.237-8.318 8.285 8.204 3.697-3.698-8.315-8.209 8.201-8.282-3.698-3.697z" /></svg></button>
-
-            <!--heart icon: https://iconmonstr.com/favorite-2-svg/ -->
-            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z" /></svg></button>
+            </form>
         </article>
     <!-- -->
     </section>

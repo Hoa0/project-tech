@@ -16,54 +16,52 @@
                 </h2>
             </section>
 
-            <form action="/searchChef/filterChef" method="post">
-                <div>
+            <form action="/filterChef/result" method="post">
+                <div class="filterCenter">
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
                         <legend>Gender:</legend>
-                        <% gender.forEach(function(genderSearch){ %>
-                            <input type="checkbox" name="gender" value="<%= genderSearch %>" id="<%= genderSearch %>">
-                            <label for="<%= genderSearch %>">
-                                <%= genderSearch %>
-                            </label><br>
-                            <% }) %>
-                    </fieldset>
+                        <input class="inputStyle" type="radio" name="gender" value="(M)" required>
+                        <label> Man</label>
 
-                    <fieldset>
-                        <!-- lijst met categorieen voorkeur opgeven-->
-                        <legend>Leeftijd:</legend>
-                        <% ages.forEach(function(leeftijd){ %>
-                            <input type="checkbox" name="ages" value="<%= leeftijd %>" id="<%= leeftijd %>">
-                            <label for="<%= leeftijd %>">
-                                <%= leeftijd %>
-                            </label><br>
-                            <% }) %>
+                        <input class="inputStyle" type="radio" name="gender" value="(V)" required>
+                        <label> Vrouw</label>
                     </fieldset>
-
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
                         <legend>Skills:</legend>
-                        <% skills.forEach(function(skillsSearch){ %>
-                            <input type="checkbox" name="skills" value="<%= skillsSearch %>" id="<%= skillsSearch %>">
-                            <label for="<%= skillsSearch %>">
-                                <%= skillsSearch %>
-                            </label><br>
-                            <% }) %>
+                        <input type="radio" name="skills" value="amateur" required>
+                        <label> Amateur</label> <br>
+
+                        <input type="radio" name="skills" value="gevorderd" required>
+                        <label> Gevorderd</label> <br>
+
+                        <input type="radio" name="skills" value="professioneel" required>
+                        <label> Professioneel</label>
                     </fieldset>
 
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
                         <legend>Sushi gerechten:</legend>
-                        <% foodSushi.forEach(function(foodSearch){ %>
-                            <input type="checkbox" name="foodSushi" value="<%= foodSearch %>" id="<%= foodSearch %>">
-                            <label for="<%= foodSearch %>">
-                                <%= foodSearch %>
-                            </label><br>
-                            <% }) %>
+                        <input type="radio" name="foodDish" value="Beef maki" required>
+                        <label> Beef maki</label><br>
+
+                        <input type="radio" name="foodDish" value="Temaki" required>
+                        <label> Temaki</label><br>
+
+                        <input type="radio" name="foodDish" value="EBI Fry Maki" required>
+                        <label> EBI Fry Maki</label><br>
+
+                        <input type="radio" name="foodDish" value="Zalm" required>
+                        <label> Zalm</label><br>
+
+                        <input type="radio" name="foodDish" value="California Maki" required>
+                        <label> California Maki</label>
+
                     </fieldset>
                 </div>
 
-                <button>Zoek een sushi chef-kok</button>
+                <button class="bntFilterSearch">Zoek een sushi chef-kok</button>
             </form>
 
         </main>

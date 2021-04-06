@@ -1,50 +1,92 @@
 [
   {
-    "id": "beefMaki",
-    "gerechten": "Beef maki",
+    "id": "p1",
+    "foodDish": "Beef maki",
     "name": "Bob",
     "ages": 25,
     "skills": "amateur",
-    "gender": "(M)"
+    "gender": "(M)",
+    "imageProfile": "images/bobChef.png",
+    "imageFood": "images/beekMaki.jpg"
   },
   {
-    "id": "temakiSushi",
-    "gerechten": "Temaki",
+    "id": "p2",
+    "foodDish": "Temaki",
     "name": "Jan",
     "ages": 24,
     "skills": "gevorderd",
-    "gender": "(M)"
+    "gender": "(M)",
+    "imageProfile": "images/janChef.png",
+    "imageFood": "images/temaki.jpg"
   },
   {
-    "id": "ebiMaki",
-    "gerechten": "EBI Fry Maki",
+    "id": "p3",
+    "foodDish": "EBI Fry Maki",
     "name": "Piet",
     "ages": 35,
     "skills": "gevorderd",
-    "gender": "(M)"
+    "gender": "(M)",
+    "imageProfile": "images/pietChef.png",
+    "imageFood": "images/eBIFryMaki.jpeg"
   },
   {
-    "id": "zalmMaki",
-    "gerechten": "Zalm",
+    "id": "p4",
+    "foodDish": "Zalm",
     "name": "Appie",
     "ages": 20,
     "skills": "gevorderd",
-    "gender": "(M)"
+    "gender": "(M)",
+    "imageProfile": "images/appieChef.png",
+    "imageFood": "images/zalm-nigiri.jpg"
   },
   {
-    "id": "zalmMakiTwo",
-    "gerechten": "Zalm",
+    "id": "p5",
+    "foodDish": "Zalm",
     "name": "Anna",
     "ages": 28,
     "skills": "gevorderd",
-    "gender": "(V)"
+    "gender": "(V)",
+    "imageProfile": "images/annaChef.png",
+    "imageFood": "images/zalm-nigiri.jpg"
   },
   {
-    "id": "CaliforniaMaki",
-    "gerechten": "California Maki",
+    "id": "p6",
+    "foodDish": "California Maki",
     "name": "Sanne",
     "ages": 23,
     "skills": "Professioneel",
-    "gender": "(V)"
+    "gender": "(V)",
+    "imageProfile": "images/sanneChef.png",
+    "imageFood": "images/californiaMaki.jpg"
+  },
+  {
+    "id": "p7",
+    "foodDish": "California Maki",
+    "name": "Lana",
+    "ages": 20,
+    "skills": "Professioneel",
+    "gender": "(V)",
+    "imageProfile": "images/lanaChef.png",
+    "imageFood": "images/californiaMaki.jpg"
+  },
+  {
+    "id": "p8",
+    "foodDish": "Beef maki",
+    "name": "Zara",
+    "ages": 22,
+    "skills": "amateur",
+    "gender": "(V)",
+    "imageProfile": "images/zaraChef.png",
+    "imageFood": "images/beekMaki.jpg"
+  },
+  {
+    "id": "p9",
+    "foodDish": "EBI Fry Maki",
+    "name": "Thomas",
+    "ages": 33,
+    "skills": "amateur",
+    "gender": "(M)",
+    "imageProfile": "images/thomasChef.png",
+    "imageFood": "images/eBIFryMaki.jpeg"
   }
 ]

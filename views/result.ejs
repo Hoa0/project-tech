@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <%- include('layout/head'); -%>
@@ -7,22 +7,19 @@
 
 <body>
     <%- include('layout/header'); -%>
-
         <main class="resultPage">
-        
-
             <!-- result - potential candidates -->
-        <section>
-            <h2 class="hide-elements">Shows profiles from chefs</h2>
-            <article>
-                <h3><%= titleSearch %></h3>
-            </article>
-        </section>
+            <section>
+                <h2 class="hide-elements">Shows profiles from chefs after filter</h2>
+                <article>
+                    <h3>
+                        <%= titleSearch %>
+                    </h3>
+                </article>
+            </section>
 
-       <!-- SECTION THREE - SHOWs CHEFS profiles-->
-       <%- include('layout/profilesTest'); -%>
-               
-
+            <!-- SECTION THREE - SHOWs CHEFS profiles-->
+            <%- include('layout/resultChef'); -%>
         </main>
 
         <!-- footer-->

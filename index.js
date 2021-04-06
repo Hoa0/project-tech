@@ -4,27 +4,11 @@ const bodyParser = require("body-parser");
 //init app
 const app = express();
 const dotenv = require("dotenv").config();
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 const port = 3000;
 
 // test db
 console.log(process.env.TESTVAR);
-
-const gender = ["Man", "Vrouw"];
-const ages = [
-  "18 t/m 25 jaar",
-  "25 t/m 35 jaar",
-  "35 t/m 45 jaar",
-  "45 jaar en ouder",
-];
-const skills = ["amateur", "gevorderd", "professioneel"];
-const foodSushi = [
-  "EBI Fry Maki",
-  "Beef Maki",
-  "temaki",
-  "Zalm",
-  "California Maki",
-];
 
 let db = null;
 // function connectDB
@@ -59,6 +43,7 @@ app.get("/", async (req, res) => {
   sushiChef = await db
     .collection("chefs")
     .find({}, { sort: { ages: -1, name: 1 } })
+    .limit(4)
     .toArray();
   res.render("index.ejs", {
     title: "Zoek een sushi chef-kok maatje",
@@ -67,23 +52,65 @@ app.get("/", async (req, res) => {
   });
 });
 
-/* post */
-app.get("/filterChef", function (req, res) {
+/* filter page */
+app.get("/filterChef", async (req, res) => {
   res.render("filter.ejs", {
-    title: "Geef je voorkeur op",
-    gender,
-    ages,
-    skills,
-    foodSushi,
+    title: "Geef je voorkeur op"
   });
 });
 
-app.get("/filterChef/result", async (req, res) => {
+/* show the filter result, filter on food,gender etc */
+app.post("/filterChef/result", async (req, res) => {
+  let sushiChef = {};
+  sushiChef = await db
+    .collection("chefs")
+    .find(
+      {
+        gender: req.body.gender,
+        skills: req.body.skills,
+        foodDish: req.body.foodDish
+      },
+      { sort: { name: 1 } }
+    ).toArray();
+
+  console.log(sushiChef);
+  console.log(req.body.gender);
+  console.log(req.body.foodDish);
+  console.log(req.body.skills);
+
   res.render("result.ejs", {
-    title: "Zoek een sushi chef-kok maatje",
     titleSearch: "Resultaten",
-    sushiChef,
+    sushiChef
   });
+});
+
+/* favorite chefs page */
+app.get("/favorite", async (req, res) => {
+  let sushiChef = {};
+  sushiChef = await db
+    .collection("faveChefs")
+    .find({}, { sort: { name: 1 } })
+    .toArray();
+  res.render("favorite.ejs", {
+    titleSearch: "Jouw favorieten",
+    sushiChef
+  });
+});
+
+// delete 
+app.post('/favorite', async(req, res) => {
+	db.collection('faveChefs').deleteOne({});
+
+	let sushiChef = {};
+
+	sushiChef = await db.collection('faveChefs').find().toArray();
+	const chefPeople = sushiChef.filter(function(sushiChef) {
+		return sushiChef.subject;
+	});
+    res.render("favorite.ejs", {
+      titleSearch: "Jouw favorieten",
+      sushiChef
+    });
 });
 
 // page not found
