@@ -9,10 +9,20 @@
 
 ## Opdracht
 
-Voor project-Tech heb ik de opdracht gekregen om één feature van een matching app te realiseren.
+De opdracht voor project-Tech is om één feature van een matching app te realiseren naar keuze. Hiervoor heb ik een aantal “job stories” en een requirements list opgesteld, vanuit daar heb ik een keuze gemaakt. <br>
+
+**Gekozen: Job story**<br>
+Wanneer ik opzoek ben naar een geschikte persoon, wil ik mijn voorkeuren kunnen opgeven, zodat ik snel potentiële chef-koks kan vinden die aansluiten naar mijn interesses.
+
+Requirement
+- voorkeur opgeven
+- kunnen filteren op interesses
+
 
 ## Database structure
-<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/databaseStructurepng.png" width="250">
+>Voor dit project heb ik gebruik gemaakt van mongoDB database. Hieronder een visuele weergaven van de datastructure. <br>
+MongoDB -> database naam: chef --> collection: chefs & collection: faveChefs
+<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/wikiImage/db-backend.png" width="250">
 
 ## Installaties
 
