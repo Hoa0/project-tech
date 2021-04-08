@@ -332,10 +332,9 @@ main.filterPage .bntFilterSearch{
   margin-bottom: 2em;
 }
 
-.favoTitel{
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: center;
+/* filter titel */
+.resultTitle{
+text-align: center;
 }
 
 /*************************************************/

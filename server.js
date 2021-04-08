@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 //init app
 const app = express();
 const dotenv = require("dotenv").config();
-const { MongoClient, ObjectId } = require("mongodb");
+const { MongoClient } = require("mongodb");
+const { ObjectID } = require("mongodb");
 const port = process.env.port || 3000;
 
 // test db
@@ -37,14 +38,13 @@ app.set("view engine", "ejs");
 
 //route
 app.get("/", async (req, res) => {
-  // create an empty list of chefs
   let sushiChef = {};
-  // look for alle chefs in database and sort them by age and name into an array
   sushiChef = await db
     .collection("chefs")
-    .find({}, { sort: { name: 1 } })
-    .limit(4)
+    .find({ like: false }, { sort: { name: 1 } })
+    .limit(5)
     .toArray();
+
   res.render("index.ejs", {
     title: "Zoek een sushi chef-kok maatje",
     titleSearch: "Nieuwe leden",
@@ -69,15 +69,8 @@ app.post("/filterChef/result", async (req, res) => {
       { skills: req.body.skills },
       { foodDish: req.body.foodDish },
       { categAge: req.body.categAge },
-      { imageProfile: req.body.imageProfile },
-      { imageFood: req.body.imageFood },
       { sort: { name: 1 } }
     ).toArray();
-
-  console.log(sushiChef);
-  console.log(req.body.gender);
-  console.log(req.body.foodDish);
-  console.log(req.body.skills);
 
   res.render("result.ejs", {
     titleSearch: "Resultaten",
@@ -85,12 +78,12 @@ app.post("/filterChef/result", async (req, res) => {
   });
 });
 
-/* favorite chefs page */
+/* show favorite chefs page */
 app.get("/favorite", async (req, res) => {
   let sushiChef = {};
   sushiChef = await db
-    .collection("faveChefs")
-    .find({}, { sort: { name: 1 } })
+    .collection("chefs")
+    .find({ like: true }, { sort: { name: 1 } })
     .toArray();
   res.render("favorite.ejs", {
     titleSearch: "Jouw favorieten",
@@ -98,7 +91,47 @@ app.get("/favorite", async (req, res) => {
   });
 });
 
+
+app.post("/favorite/like", async (req, res) => {
+  const id = new ObjectID(req.body.id);
+  // Bron: https://docs.mongodb.com/manual/reference/method/ObjectId/
+  let sushiChef = {};
+
+  // search for chefs, update the id and change like boolean false to true
+  const chef = await db.collection('chefs')
+    .updateOne({ '_id': id }, { $set: { 'like': true } });
+
+  // search for chefs with like boolean false
+  sushiChef = await db.collection('chefs')
+    .find({ like: false }).toArray();
+  res.render("index.ejs", {
+    title: "Zoek een sushi chef-kok maatje",
+    titleSearch: "Nieuwe leden",
+    sushiChef
+  });
+});
+
+/* dislike*/
+app.post("/favorite/dislike", async (req, res) => {
+  const id = new ObjectID(req.body.id);
+  // Bron: https://docs.mongodb.com/manual/reference/method/ObjectId/
+  let sushiChef = {};
+
+  // search for chefs, update the id and change like boolean true to false
+  const chef = await db.collection('chefs')
+    .updateOne({ '_id': id }, { $set: { 'like': false } });
+
+  // search for chefs with like boolean false
+  sushiChef = await db.collection('chefs')
+    .find({ like: false }).toArray();
+  res.render("favorite.ejs", {
+    titleSearch: "Jouw favorieten",
+    sushiChef
+  });
+});
+
 // delete 
+/*
 app.post('/favorite', async (req, res) => {
   db.collection('faveChefs').deleteOne({});
 
@@ -112,7 +145,7 @@ app.post('/favorite', async (req, res) => {
     titleSearch: "Jouw favorieten",
     sushiChef
   });
-});
+});*/
 
 // page not found
 app.use(function (req, res, next) {
