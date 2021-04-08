@@ -107,14 +107,14 @@ main {
 /*--------------- SEARCH PAGE -------------------*/
 /*-------------- SECTION ONE --------------------*/
 /*main.searchPage>section:first-of-type*/
-section.logoMatchingApp{
+section.logoMatchingApp {
   text-align      : center;
   background-color: #ff6f59;
   padding-bottom  : 1em;
   border-bottom   : 0.05rem solid grey;
 }
 
-main.filterPage>section.logoMatchingApp{
+main.filterPage>section.logoMatchingApp {
   margin-bottom: 2em;
 }
 
@@ -122,10 +122,6 @@ main.filterPage>section.logoMatchingApp{
 img.logoImage {
   width     : 20%;
   margin-top: 1em;
-}
-.titelFilter{
-margin-right: 11%;
-
 }
 /* SEARCH INPUT STYLE */
 main.searchPage>section:first-of-type>article>input {
@@ -135,85 +131,13 @@ main.searchPage>section:first-of-type>article>input {
   text-align   : center;
 }
 
-/* filter button */
-main.searchPage>section:first-of-type>article>button {
-  background: none;
-  border    : none;
-  cursor    : pointer;
-}
-
-main.searchPage>section:first-of-type>article>button>svg {
-  margin-bottom: -0.5em;
-  width        : 2em;
-  height       : 2em;
-}
-
-/*--------- SECTION TWO - SEARCH PAGE - nieuwe leden ---------*/
-main.searchPage>section:nth-of-type(2) {
-  text-align: center;
-  padding   : 1em 0 1em 0;
-}
-
-/*--------- SECTION THREE - SEARCH PAGE - shows chefs ---------*/
-main.searchPage>section:nth-of-type(3) {
-  /* grid template */
-  display : grid;
-  grid-gap: 0em;
-  grid-template-areas:
-    "photo profileText"
-    "bntIcons bntIcons";
-}
-
-/* profile image - sushi */
-main.searchPage>section:nth-of-type(3)>article:first-of-type {
-  /* grid template */
-  grid-area: photo;
-}
-
 img.sushiImage {
   width : 13em;
   height: 13em;
 }
 
-/* information about chefs, name, skills, food */
-main.searchPage>section:nth-of-type(3)>article:nth-of-type(2) {
-  line-height     : 0.2rem;
-  text-align      : center;
-  background-color: #ffae9d;
-  /* grid template */
-  grid-area       : profileText;
-  width           : 13em;
-}
-
 img.chefImage {
   width: 6em;
-}
-
-/* icons cross and heart*/
-main.searchPage>section:nth-of-type(3)>article:nth-of-type(3) {
-  background-color: #cce3de;
-  margin-bottom   : 2em;
-  /* center icons*/
-  display         : flex;
-  /* grid template */
-  grid-area       : bntIcons;
-}
-
-/* icons button */
-main.searchPage>section:nth-of-type(3)>article:nth-of-type(3) button {
-  width     : 100%;
-  background: none;
-  cursor    : pointer;
-  padding   : 1em;
-  /* center icons*/
-  margin    : 0 auto 0 auto;
-  /* T R B L */
-}
-
-/* icons svg */
-main.searchPage>section:nth-of-type(3)>article:nth-of-type(3) button>svg {
-  width : 4em;
-  height: 4em;
 }
 
 /*************************************************/
@@ -253,12 +177,12 @@ img.chefImage {
   width: 6em;
 }
 
-legend{
-  background-color:white;
-  width:100%;
-  padding:0.8em;	
-  border-radius: 2rem;
-  line-height: 0em;
+legend {
+  background-color: white;
+  width           : 100%;
+  padding         : 0.8em;
+  border-radius   : 2rem;
+  line-height     : 0em;
 }
 
 /* icons cross and heart*/
@@ -316,26 +240,67 @@ form fieldset {
   padding     : 2em
 }
 
-main.filterPage>section:first-of-type>h2 {
-  margin-left: 20%;
-  padding    : 1em;
-}
+
 
 /* zoek chef-kok button */
-main.filterPage .bntFilterSearch{
-  width: 12em;
-  height: 4em;
-  border-radius: 2rem;
+main.filterPage .bntFilterSearch {
+  width           : 12em;
+  height          : 4em;
+  border-radius   : 2rem;
   background-color: #ff6f59;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 2em;
+  font-weight     : bold;
+  color           : white;
+  margin-bottom   : 2em;
+}
+
+main.filterPage .bntFilterSearch:hover {
+  background-color: #21d076;
+  color           : white;
 }
 
 /* filter titel */
-.resultTitle{
-text-align: center;
+.resultTitle {
+  text-align: center;
 }
+
+/* reset bnt*/
+.resetBnt {
+  width           : 12em;
+  height          : 4em;
+  border-radius   : 2rem;
+  background-color: #a49a99;
+  font-weight     : bold;
+  color           : white;
+  margin-bottom   : 2em;
+}
+
+/* bnt filter specific and random */
+.filterOptionChange {
+  text-align      : center;
+  width           : 12em;
+  height          : 4em;
+  border-radius   : 2rem;
+  background-color: #f5aa9e;
+  font-weight     : bold;
+  color           : white;
+}
+
+.filterOptionChange:hover{
+  background-color: #000000;
+  color           : white;
+  fill            : white;
+}
+
+/* titel style filter*/
+.titelFilterH {
+  color: white;
+}
+
+/* filter */
+.centerS {
+  text-align: center;
+}
+
 
 /*************************************************/
 /*------------------- MEDIA QUERY---------------*/
@@ -366,7 +331,7 @@ text-align: center;
     display     : grid;
     grid-gap    : 0em;
     grid-template-areas:
-      "photo profileText"
+      "photo profileText "
       "bntIcons bntIcons";
   }
 

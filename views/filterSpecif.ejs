@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <%- include('layout/head'); -%>
@@ -7,7 +7,6 @@
 
 <body>
     <%- include('layout/header'); -%>
-
         <main class="filterPage">
             <!-- filter page -->
             <section class="logoMatchingApp">
@@ -15,17 +14,18 @@
                 <h2 class="titelFilter">
                     <%= title %>
                 </h2>
-                <h3 class="titelFilterH">Zoek gericht naar chefkoks</h3>
-                <a href="/filterSpecifChef"><button class="filterOptionChange">Gericht zoeken<svg width="24" height="24"
+                <h3 class="titelFilterH">Zoek naar diverse chefkoks</h3>
+                <a href="/filterChef"><button class="filterOptionChange">Divers zoeken<svg width="24" height="24"
                             xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
                             <path
                                 d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z" />
                         </svg></button></a>
             </section>
             <section class="centerS">
-                <h2>Divers zoeken</h2>
+                <h2>Specifiek zoeken</h2>
             </section>
-            <form action="/filterChef/result" method="post">
+
+            <form action="/filterChef/result:specific" method="post">
                 <div class="filterCenter">
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
@@ -39,44 +39,44 @@
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
                         <legend>Leeftijd:</legend>
-                        <input type="checkbox" name="categAge" value="18 t/m 25">
+                        <input type="radio" name="categAge" value="18 t/m 25">
                         <label>18 t/m 25 jaar</label> <br>
 
-                        <input type="checkbox" name="categAge" value="25 t/m 35">
+                        <input type="radio" name="categAge" value="25 t/m 35">
                         <label> 25 jaar t/m 35</label> <br>
 
-                        <input type="checkbox" name="categAge" value="35 en ouder">
+                        <input type="radio" name="categAge" value="35 en ouder">
                         <label>35 jaar en ouder</label>
                     </fieldset>
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
                         <legend>Skills:</legend>
-                        <input type="checkbox" name="skills" value="amateur">
+                        <input type="radio" name="skills" value="amateur">
                         <label> Amateur</label>
 
-                        <input type="checkbox" name="skills" value="gevorderd">
+                        <input type="radio" name="skills" value="gevorderd">
                         <label> Gevorderd</label> <br>
 
-                        <input type="checkbox" name="skills" value="professioneel">
+                        <input type="radio" name="skills" value="professioneel">
                         <label> Professioneel</label>
                     </fieldset>
 
                     <fieldset>
                         <!-- lijst met categorieen voorkeur opgeven-->
                         <legend>Sushi gerechten:</legend>
-                        <input type="checkbox" name="foodDish" value="Beef maki">
+                        <input type="radio" name="foodDish" value="Beef maki">
                         <label> Beef maki</label><br>
 
-                        <input type="checkbox" name="foodDish" value="Temaki">
+                        <input type="radio" name="foodDish" value="Temaki">
                         <label> Temaki</label><br>
 
-                        <input type="checkbox" name="foodDish" value="EBI Fry Maki">
+                        <input type="radio" name="foodDish" value="EBI Fry Maki">
                         <label> EBI Fry Maki</label><br>
 
-                        <input type="checkbox" name="foodDish" value="Zalm">
+                        <input type="radio" name="foodDish" value="Zalm">
                         <label> Zalm</label><br>
 
-                        <input type="checkbox" name="foodDish" value="California Maki">
+                        <input type="radio" name="foodDish" value="California Maki">
                         <label> California Maki</label>
 
                     </fieldset>

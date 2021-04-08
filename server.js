@@ -78,6 +78,42 @@ app.post("/filterChef/result", async (req, res) => {
   });
 });
 
+/* route for filter specific*/
+app.get("/filterSpecifChef", async (req, res) => {
+  let sushiChef = {};
+  sushiChef = await db
+    .collection("chefs")
+    .find({}, { sort: { ages: -1, name: 1 } })
+    .limit(4)
+    .toArray();
+  res.render("filterSpecif.ejs", {
+    title: "Geef je voorkeur op",
+    sushiChef
+  });
+});
+
+/* filter on 1 specific item, show */
+app.post("/filterChef/result:specific", async (req, res) => {
+  let sushiChef = {};
+  // look for alle chefs in database and filter: gender, food, skills
+  sushiChef = await db
+    .collection("chefs")
+    .find(
+      {
+        gender: req.body.gender,
+        foodDish: req.body.foodDish,
+        skills: req.body.skills,
+        categAge: req.body.categAge
+      },
+      { sort: { name: 1 } }
+    ).toArray();
+
+  res.render("result.ejs", {
+    titleSearch: "Resultaten",
+    sushiChef,
+  });
+});
+
 /* show favorite chefs page */
 app.get("/favorite", async (req, res) => {
   let sushiChef = {};
@@ -91,7 +127,7 @@ app.get("/favorite", async (req, res) => {
   });
 });
 
-
+/* like route */
 app.post("/favorite/like", async (req, res) => {
   const id = new ObjectID(req.body.id);
   // Bron: https://docs.mongodb.com/manual/reference/method/ObjectId/
@@ -129,23 +165,6 @@ app.post("/favorite/dislike", async (req, res) => {
     sushiChef
   });
 });
-
-// delete 
-/*
-app.post('/favorite', async (req, res) => {
-  db.collection('faveChefs').deleteOne({});
-
-  let sushiChef = {};
-
-  sushiChef = await db.collection('faveChefs').find().toArray();
-  const chefPeople = sushiChef.filter(function (sushiChef) {
-    return sushiChef;
-  });
-  res.render("favorite.ejs", {
-    titleSearch: "Jouw favorieten",
-    sushiChef
-  });
-});*/
 
 // page not found
 app.use(function (req, res, next) {
