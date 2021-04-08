@@ -27,7 +27,7 @@ Requirement
 ## Database structure
 >Voor dit project heb ik gebruik gemaakt van mongoDB database. Hieronder een visuele weergaven van de datastructure. <br>
 MongoDB -> database naam: chef --> collection: chefs & collection: faveChefs
-<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/wikiImage/db-backend.png" width="250">
+<img src="https://github.com/Hoa0/project-tech/blob/main/static/images/wikiImage/db-backend1.png" width="250">
 
 ## Installaties
 
